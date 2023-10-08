@@ -10,6 +10,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MoviesListComponent } from './pages/movies-list/movies-list.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { BannerComponent } from './components/banner/banner.component';
+import { MovieItemComponent } from './components/movie-item/movie-item.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { SliderComponent } from './components/slider/slider.component';
     HomeComponent,
     MoviesListComponent,
     SliderComponent,
+    BannerComponent,
+    MovieItemComponent,
   ],
   imports: [
     BrowserModule,

@@ -48,11 +48,14 @@
         }
       }
       .description {
-        width: 60%;
+        width: 50%;
         p {
           font-size: 1rem;
-          max-height: 200px;
           overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 6;
+          white-space: pre-wrap;
         }
       }
     }

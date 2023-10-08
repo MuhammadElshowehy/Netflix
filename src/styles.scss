@@ -14,16 +14,23 @@
   --white: white;
   --black: #222;
   --gold: gold;
+  --gray: #999;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  background-color: #333;
+  color: var(--white);
   font: {
     size: 16px;
     weight: 400;
   }
   position: relative;
   min-height: 100vh;
+}
+
+.container {
+  margin: 1.5rem 1rem;
 }
 
 ul {

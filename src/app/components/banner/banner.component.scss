@@ -1,0 +1,21 @@
+.grid {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px 8px;
+  .item {
+    width: 195px;
+  }
+}
+@media (max-width: 767px) {
+  .grid {
+    justify-content: center;
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    .item {
+      width: 100%;
+    }
+  }
+}
