@@ -1,12 +1,8 @@
-<div class="banner container">
-  <h2>popular movies</h2>
+<div class="banner container" *ngIf="movies">
+  <h2>{{ title }}</h2>
   <div class="grid">
-    <app-movie-item class="item"></app-movie-item>
-    <app-movie-item class="item"></app-movie-item>
-    <app-movie-item class="item"></app-movie-item>
-    <app-movie-item class="item"></app-movie-item>
-    <app-movie-item class="item"></app-movie-item>
-    <app-movie-item class="item"></app-movie-item>
-    <app-movie-item class="item"></app-movie-item>
+    <div class="item" *ngFor="let movie of movies">
+      <app-movie-item [item]="movie"></app-movie-item>
+    </div>
   </div>
 </div>

@@ -7,7 +7,7 @@ import {
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
-import { MoviesResponse } from 'src/app/types/movie';
+import { Movie } from 'src/app/types/movie';
 import { imageBaseUrl } from 'src/app/constants/images';
 
 @Component({
@@ -22,14 +22,14 @@ import { imageBaseUrl } from 'src/app/constants/images';
   ],
 })
 export class SliderComponent implements OnInit {
-  popularMovies: MoviesResponse;
+  popularMovies: Movie[] = [];
   slideIndex = 0;
   imageBaseUrl = imageBaseUrl;
 
   constructor(private moviesServices: MoviesService) {}
 
   ngOnInit() {
-    this.moviesServices.getPopularMovies().subscribe((res) => {
+    this.moviesServices.getMoviesByType('popular').subscribe((res) => {
       this.popularMovies = res;
     });
     this.changeSlide();

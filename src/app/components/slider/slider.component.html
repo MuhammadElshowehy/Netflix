@@ -1,5 +1,5 @@
 <div class="slider" *ngIf="popularMovies">
-  <ng-container *ngFor="let movie of popularMovies.results; let i = index">
+  <ng-container *ngFor="let movie of popularMovies; let i = index">
     <div class="slide" *ngIf="i === slideIndex" @slideFade>
       <div class="slide-bg">
         <img
